@@ -21,6 +21,7 @@ public class ForLab3 {
 				sum+=i;
 			}
 		}
+		System.out.println(ranNum1 + "부터 " + ranNum2 + "까지의 짝수의 합 : " + sum);
 	}
 	
 	

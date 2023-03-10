@@ -1,4 +1,4 @@
-package day3;
+package day4;
 
 
 public class TwoArrayLab2 {
@@ -38,6 +38,7 @@ public class TwoArrayLab2 {
 		int cCount = 0;
 		int dCount = 0;
 		
+		//전체 돌때 중첩된 for문 필수
 		for (int i = 0; i < charArr.length; i++) {
 			for (int j = 0; j < charArr[i].length; j++) {
 				switch(charArr[i][j]) {

@@ -1,4 +1,4 @@
-package day3;
+package day4;
 
 import java.util.Iterator;
 
@@ -56,16 +56,38 @@ public class TwoArrayLab5 {
 		
 		//3
 		//세로로 돌리기
+//		int num = 1;
+		
+		
+		System.out.println("방법1 : ");
+//		for (int i = 0;	i < arr1[i].length; i++) {		
+//			for (int j = 0; j < arr1.length; j++) {	
+//				if(i <= j && i + j < 5) {
+//					arr1[j][i] = num;
+//					num++;
+//				}
+//			}
+//		}
+		
+//		for (int i = 0; i < arr1.length; i++) {
+//			for (int j = 0; j < arr1[i].length; j++) {
+//				System.out.print(arr1[i][j] + " ");
+//			}
+//			System.out.println();
+//		}
+//		
+		
+		System.out.println("방법2 : ");
+		
+		int len = arr1.length;
 		int num = 1;
-				
-		for (int i = 0;	i < arr1[i].length; i++) {		
-			for (int j = 0; j < arr1.length; j++) {	
-				if(i <= j && i + j < 5) {
-					arr1[j][i] = num;
-					num++;
-				}
+		for (int i = 0;	i < arr1[0].length; i++) {		
+			for (int j = i; j < len; j++) {	
+				arr1[j][i] = num++;
 			}
+			len--;
 		}
+
 		
 		for (int i = 0; i < arr1.length; i++) {
 			for (int j = 0; j < arr1[i].length; j++) {
@@ -73,9 +95,6 @@ public class TwoArrayLab5 {
 			}
 			System.out.println();
 		}
-		
-		
-
 	}
 
 }

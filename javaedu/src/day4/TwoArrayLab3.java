@@ -1,6 +1,5 @@
-package day3;
+package day4;
 
-import java.util.Iterator;
 
 public class TwoArrayLab3 {
 
@@ -47,12 +46,15 @@ public class TwoArrayLab3 {
 		int[] weekHour = new int[4];
 		
 		//월별 시간
-		for (int i = 0; i < dayArr[0].length; i++) {		
-			System.out.println(i);
-			for (int j = 0; j < dayArr.length; j++) {		
+		for (int i = 0; i < dayArr[0].length; i++) {	//7	
+//			System.out.println(i);
+			for (int j = 0; j < dayArr.length; j++) {	
 				dayHour[i] += dayArr[j][i];
 			}
 		}
+		
+		//switch문 사용안하고 배열사용도 가능
+		//char[] week = {'월','화','수','목','금','토','일'};
 		
 		
 		for (int i = 0; i < dayHour.length; i++) {

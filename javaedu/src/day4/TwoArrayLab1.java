@@ -1,6 +1,5 @@
-package day3;
+package day4;
 
-import java.util.Iterator;
 
 public class TwoArrayLab1 {
 
@@ -53,23 +52,38 @@ public class TwoArrayLab1 {
 		System.out.println("행의 갯수: " + ary.length);
 		System.out.println("열의 갯수: " + ary[ary.length-1].length);
 		
-		//왼쪽 대각선
+		System.out.println("왼쪽 대각선 방법1");
+		//왼쪽 대각선 방법1
 		for (int i = 0; i < ary.length; i++) {
 			for (int j = 0; j < ary[i].length; j++) {
 				if(i == j) {
-					System.out.print(ary[i][j] + " ");
+					System.out.print(
+							ary[i][j] + " ");
 				}
 			}
 		}
+		
+		System.out.println("\n\n왼쪽 대각선 방법2");
+		//왼쪽 대각선 방법2
+		for (int i = 0; i < ary.length; i++) {
+			System.out.print(ary[i][i] + " ");
+		}
+		
+		
 		System.out.println();
 		
-		//오른쪽 대각선
+		//오른쪽 대각선 방법1
 		for (int i = 0; i < ary.length; i++) {
 			for (int j = 0; j < ary[i].length; j++) {
 				if((i+j) == ary.length-1) {
 					System.out.print(ary[i][j] + " ");					
 				}
 			}
+		}
+		
+		//오른쪽 대각선 방법2
+		for (int i = 0; i < ary.length; i++) {
+			System.out.print(ary[i][ary.length-1-i] + " ");	
 		}
 
 	}

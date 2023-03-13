@@ -40,9 +40,14 @@ public class MethodLab8 {
 		int sum = 0;
 		
 		if(num.length>0) {
-			for (int i = 0; i < num.length; i++) {
-				if(num[i] % 2 == 0) {
-					sum += num[i];					
+//			for (int i = 0; i < num.length; i++) {
+//				if(num[i] % 2 == 0) {
+//					sum += num[i];					
+//				}
+//			}
+			for(int n : num) {
+				if(n % 2 == 0) {
+					sum += n;
 				}
 			}
 			return sum;

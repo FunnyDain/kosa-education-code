@@ -52,17 +52,24 @@ public class CalculatorTest {
 		System.out.printf("곱셈: %d\n", cal.getMultiplication());
 		System.out.printf("나눗셈: %f\n", cal.getDivision());
 		
-		System.out.println("계속 진행하시겠습니까? o/x");
-		String answer = sc.next();
-		if(answer.equals("o")) {
-			System.out.println("숫자 두개를 입력하시오.");
-			num1 = sc.nextInt();
-			num2 = sc.nextInt();
-			CalculatorExpr cal2 = new CalculatorExpr(num1, num2);
-			System.out.printf("덧셈: %d\n", cal2.getAddition());
-			System.out.printf("뺄셈: %d\n", cal2.getSubtraction());
-			System.out.printf("곱셈: %d\n", cal2.getMultiplication());
-			System.out.printf("나눗셈: %f\n", cal2.getDivision());
+		while(true) {
+			System.out.println("계속 진행하시겠습니까? o/x");
+			String answer = sc.next();
+			if(answer.equals("o")) {
+				System.out.println("숫자 두개를 입력하시오.");
+				num1 = sc.nextInt();
+				num2 = sc.nextInt();
+				CalculatorExpr cal2 = new CalculatorExpr(num1, num2);
+				System.out.printf("덧셈: %d\n", cal2.getAddition());
+				System.out.printf("뺄셈: %d\n", cal2.getSubtraction());
+				System.out.printf("곱셈: %d\n", cal2.getMultiplication());
+				System.out.printf("나눗셈: %f\n", cal2.getDivision());
+			}else if(answer.equals("x")){
+				System.out.println("종료되었습니다.");
+				break;
+			}else {
+				System.out.println("잘못 입력하셨습니다.");
+			}
 		}
 		
 		sc.close();

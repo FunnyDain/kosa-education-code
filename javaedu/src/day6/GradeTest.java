@@ -6,7 +6,7 @@ class GradeExpr{
 	
 	private int[] jumsu;
 	
-	GradeExpr(int[] jumsu){
+	public GradeExpr(int[] jumsu){
 		this.jumsu = new int[jumsu.length];
 		for (int i = 0; i < jumsu.length; i++) {
 			this.jumsu[i] = jumsu[i];
@@ -15,11 +15,12 @@ class GradeExpr{
 	}
 	
 	double getAverage(){
-		int sum = 0;
-		for(int score : this.jumsu) {
-			sum += score;
-		}
-		return	(double)sum / jumsu.length; 
+//		int sum = 0;
+//		for(int score : this.jumsu) {
+//			sum += score;
+//		}
+//		return	(double)sum / jumsu.length; 
+		return getTotal() / (double)jumsu.length;
 	}
 	
 	int sum = 0;
@@ -54,13 +55,14 @@ class GradeExpr{
 public class GradeTest {
 
 	public static void main(String[] args) {
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("데이터 갯수: ");
 		int count = sc.nextInt();
 		
 		int[] jumsu = new int[count];
 		System.out.print("점수들: ");
-		for (int i = 0; i < jumsu.length; i++) {
+		for (int i = 0; i < count; i++) {
 			jumsu[i] = sc.nextInt();
 		}
 		GradeExpr grade = new GradeExpr(jumsu);
@@ -76,6 +78,8 @@ public class GradeTest {
 		System.out.println("평균 : " + grade.getAverage());
 		System.out.println("최고 점수 : " + grade.getGoodScore());
 		System.out.println("최저 점수 : " + grade.getBadScore());
+		
+		sc.close();
 	}
 
 }

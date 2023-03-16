@@ -1,4 +1,4 @@
-package day8;
+package day9;
 
 interface Inter1 {
 	void expr1();
@@ -12,6 +12,7 @@ interface Inter3 extends Inter1, Inter2 {
 	void expr3();
 }
 
+//오버라이딩 해야할 메서드3개
 class InterClass implements Inter3 {
 	public void expr1() {
 		System.out.println("expr1() 메서드 오버라이딩");

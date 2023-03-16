@@ -1,4 +1,4 @@
-package day8;
+package day9;
 
 interface Printable {
 	public static final int PRINT_TYPE1 = 1;
@@ -64,7 +64,14 @@ public class InterfaceTest1 {
 
 	static void printOut(Printable prt) {
 		prt.setPage(100);
-		((Shape3) prt).setColor("파란색");
+		((Circle3) prt).draw();
+		((Circle3) prt).setColor("파란색");
+		
+		//아예 변수로 담아서 사용해도 됌
+		Circle3 cobj = (Circle3)prt;
+		cobj.draw();
+		cobj.setColor("노란색");
+		
 		if (prt.isAvailable())
 			prt.print(Printable.PRINT_TYPE2);
 	}

@@ -43,14 +43,14 @@ public class MethodLab7 {
 	
 	
 	static int[] powerArray(int num) {
-		int[] arr = new int[10];
+		int[] arr = new int[num];
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = (i+1)*num;
 		}
 		return arr;
 	}
 	
-	static void printArray(int[] arr) {
+	public static void printArray(int[] arr) {
 		for (int i = 0; i < arr.length; i++) {
 			if(i == arr.length-1)
 				System.out.print(arr[i]);

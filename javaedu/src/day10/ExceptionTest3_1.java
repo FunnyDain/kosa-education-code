@@ -1,6 +1,9 @@
-package day9;
+package day10;
 import java.util.Random;
 
+//아무도 try-catch를 안가지고 있다.
+//main메서드 throws을 가지고 있다.
+//= jvm이 대신하도록 하겠다.
 public class ExceptionTest3_1 {
 	public static void main(String[] args) throws TestException {
 		System.out.println("main()수행시작");

@@ -1,8 +1,8 @@
-package day9;
+package day10;
 class Account {
-	private String account;
-	private double balance;
-	private double interestRate;
+	private String account;			//계좌번호
+	private double balance;			//잔액
+	private double interestRate;	//이자율
 	public Account() {
 	}
 	public Account(String account, double balance, double interestRate) {
@@ -10,10 +10,16 @@ class Account {
 		setBalance(balance);
 		setInterestRate(interestRate);
 	}	
-	@Override  
+//	@Override  
+//	public String toString() {
+//		return "계좌정보 : " + account + " " + balance + " " + interestRate;
+//	}
+	
+	@Override
 	public String toString() {
-		return "계좌정보 : " + account + " " + balance + " " + interestRate;
+		return "Account [account=" + account + ", balance=" + balance + ", interestRate=" + interestRate + "]";
 	}
+	
 	public double calculateInterest() {
 		// 잔액기준 이자 계산		
 		return balance * interestRate*0.01;

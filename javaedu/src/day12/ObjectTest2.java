@@ -1,4 +1,4 @@
-package day11;
+package day12;
 
 class Member2 {
 	private int id;
@@ -15,7 +15,7 @@ class Member2 {
 		if (this == o)
 			return true;
 		if (o != null && o instanceof Member2) {
-			Member2 m = (Member2) o;
+			Member2 m = (Member2) o;		//부모타입 Object이므로 자식형으로 멤버를 접근해야함
 			if (id == m.id && name.equals(m.name) && password.equals(m.password))
 				return true;
 		}
@@ -28,10 +28,10 @@ public class ObjectTest2 {
 		Member2 obj1 = new Member2(10, "자바", "duke");
 		Member2 obj2 = new Member2(10, "자바", "duke");
 		Member2 obj3 = new Member2(20, "자바", "duke");
-		System.out.println(obj1.equals(obj2));
-		System.out.println(obj1 == obj2);
-		System.out.println(obj1.equals(null));
-		System.out.println(obj1.equals(new java.util.Date()));
-		System.out.println(obj1.equals(obj3));
+		System.out.println(obj1.equals(obj2));		//true
+		System.out.println(obj1 == obj2);		//false
+		System.out.println(obj1.equals(null));	//false
+		System.out.println(obj1.equals(new java.util.Date()));		//false
+		System.out.println(obj1.equals(obj3));		//false
 	}
 }

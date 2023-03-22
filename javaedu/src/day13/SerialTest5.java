@@ -1,11 +1,11 @@
-package day12;
+package day13;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 class StepDTO implements Serializable{
 	private static final long serialVersionUID = -9060430121447664088L;
 	private String stepId;
-	transient private String password;
+	transient private String password;		//transient : 객체 직렬화의 멤버변수를 제외대상으로 만든다.
 	private int age;
 	transient private int score;
 	public StepDTO(String stepId, String password, int age, int score) {
@@ -48,7 +48,7 @@ public class SerialTest5 {
       ObjectOutputStream oos = 
     		  new ObjectOutputStream(fos);
       
-      StepDTO dto  = new StepDTO("unico", "@12345", 33, 100);
+      StepDTO dto  = new StepDTO("unico", "@12345", 33, 100);		//password, score 기본값으로 자동으로 setting
       oos.writeObject(dto);
       oos.close();
       fos.close();

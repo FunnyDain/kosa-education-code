@@ -20,7 +20,7 @@ public class CountLab {
 				data = br.readLine();
 				if(data == null) 
 					break;
-				else if(data.contains("yesterday")) 
+				else if(data.contains(word)) 
 					count++;
 			}
 			

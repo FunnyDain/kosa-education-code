@@ -43,7 +43,7 @@ public class FileOutLab {
 			out.write(str1);
 			out.write(str2);
 			System.out.println("저장이 완료되었습니다.");
-	
+
 		}catch(Exception e) {
 			System.out.println("파일에 저장하는 동안 오류가 발생했습니다.");
 		}

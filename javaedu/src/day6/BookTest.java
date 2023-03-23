@@ -1,42 +1,20 @@
 package day6;
 
-class Book{
-	String title;
-	String author;
-	int price;
-	
-	Book(){
-		title = "이것이 자바다";
-	};
-	Book(String title, String author, int price){
-		this.title = title;
-		this.author = author;
-		this.price = price;
-	}
-	
-	String getBookInfo() {
-		String result = title + " " + author + " " + price; 
-		return result;
-	}
-}
-
-
-
 public class BookTest {
 
 	public static void main(String[] args) {
-		Book book1 = new Book();
-		
-		Book book2 = new Book("이것은 파이썬이다","신다인",10000);
-		Book book3 = new Book("이것은 스프링이다","박연진",5000);
-		Book book4 = new Book("이것은 자바스크립트이다","문동은",60000);
-		Book book5 = new Book("이것은 JSP이다","김재준",40000);
+		Book book1 = new Book("자바의 정석","남궁성",27000);
+		Book book2 = new Book("챗GPT","반병현",11700);
+		Book book3 = new Book("스타트 스프링 부트","남가람",27000);
+		Book book4 = new Book("Doit! 자바프로그래밍","박은중",22500);
+		Book book5 = new Book("이것이 자바다","신용권,임경균",36000);
 		
 		System.out.println(book1.getBookInfo());
 		System.out.println(book2.getBookInfo());
 		System.out.println(book3.getBookInfo());
 		System.out.println(book4.getBookInfo());
 		System.out.println(book5.getBookInfo());
+
 
 	}
 

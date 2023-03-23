@@ -1,4 +1,4 @@
-package day13;
+package day14;
 
 class LocalTest {
 	String name = "Java";
@@ -16,7 +16,7 @@ class LocalTest {
 		}
 		Local lt = new Local();
 		lt.pr("Local Test");
-	}
+	}		//pr()
 }
 
 public class InnerTest2 {

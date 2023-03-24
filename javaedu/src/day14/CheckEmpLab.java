@@ -34,11 +34,11 @@ public class CheckEmpLab {
 		String sql1= "SELECT ENAME, SAL FROM emp";
 		String sql2= "SELECT ENAME, DATE_FORMAT(HIREDATE, '%Y년 %m월 %d일')HIREDATE FROM emp order by HIREDATE desc";
 		
-		Random random = new Random();
+		boolean random = new Random().nextBoolean();		//한번만 사용할 것이므로
 		
 
-		if(random.nextBoolean()) {
-			try(Connection conn = DriverManager.getConnection(url, user, passwd);
+		if(random) {
+			try(Connection conn = DriverManager.getConnection(url, user, passwd);		//DriverManager abstract클래스
 					Statement stmt = conn.createStatement();
 					ResultSet rs = stmt.executeQuery(sql1);){
 				if(rs.next()) {

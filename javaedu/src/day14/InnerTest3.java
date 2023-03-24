@@ -4,11 +4,8 @@ abstract class Test {
 	Test() {
 		System.out.println("No Argument sample");
 	}
-
 	abstract void output(String s);
 }
-
-
 
 
 public class InnerTest3 {

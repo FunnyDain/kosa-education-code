@@ -43,11 +43,11 @@ public class InsertBookLab {
 						break;
 					case "5" :
 						kind = "b05";
-						break;
+						
 				}
 				pstmt.setString(1, title);
 				pstmt.setInt(2, price);
-				pstmt.setString(3, kind);
+				pstmt.setString(3, kind);		
 				pstmt.executeUpdate();
 				
 				System.out.println("정보가 입력되었습니다.\n계속 입력하겠습니까?(y/n) : ");
@@ -55,7 +55,7 @@ public class InsertBookLab {
 				
 				if(aws.equalsIgnoreCase("y")) {
 					count++;
-					continue;
+//					continue;-
 				}else {
 					System.out.printf("%d개의 데이터 입력 완료!",count);
 					break;

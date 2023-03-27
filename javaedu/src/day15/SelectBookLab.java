@@ -26,7 +26,13 @@ public class SelectBookLab {
 
 			while (true) {
 				System.out.println(
-						"1. 모두 출력하기\n2. 가격이 높은 순으로 출력하기\n3. 20000이상의 도서들만 출력하기\n4. 웹 프로그래밍 도서들만 출력하기\n5. 데이터베이스와 인프라 도서들만 출력하기\n6. 도서명에 '자바'를 포함하는 도서들만 출력하기\n7. 분류별 도서 가격의 평균을 출력하기");
+						"1. 모두 출력하기\n"
+						+ "2. 가격이 높은 순으로 출력하기\n"
+						+ "3. 20000이상의 도서들만 출력하기\n"
+						+ "4. 웹 프로그래밍 도서들만 출력하기\n"
+						+ "5. 데이터베이스와 인프라 도서들만 출력하기\n"
+						+ "6. 도서명에 '자바'를 포함하는 도서들만 출력하기\n"
+						+ "7. 분류별 도서 가격의 평균을 출력하기");
 				System.out.print("\n원하는 메뉴의 번호를 선택: ");
 
 				num = sc.nextInt();
@@ -59,6 +65,7 @@ public class SelectBookLab {
 					break;
 				case 7:
 					rs = stmt.executeQuery("select kind, format(avg(price), 0) price from book group by kind");
+
 					print = 3;
 					break;
 		
@@ -88,9 +95,8 @@ public class SelectBookLab {
 							System.out.printf("%s들의 가격 평균은 %s원 입니다\n",map.get(rs.getString("kind")),rs.getString("price"));	
 						}else {
 							System.out.println("데이터가 없습니다.");
-						}
-						break;
-					
+							break;
+						}	
 					}
 				}
 				System.out.println("계속 처리하겠습까?? >> y/n");

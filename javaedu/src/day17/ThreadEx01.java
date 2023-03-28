@@ -1,5 +1,6 @@
-package day16;
+package day17;
 
+//총 쓰레드 메인까지 포함해서 3개
 class ThreadEx01 {
 	public static void main(String args[]) {
 		ThreadEx1_1 t1 = new ThreadEx1_1();

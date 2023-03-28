@@ -1,4 +1,4 @@
-package day16;
+package day17;
 
 public class ThreadEx09 {
 	public static void main(String[] args) throws Exception {
@@ -16,6 +16,8 @@ public class ThreadEx09 {
 		threadA.start();
 		threadB.start();
 		threadC.start();
+		
+		//자식스레드가 먼저 하고 main스레드가 마지막으로 동작함
 		threadA.join();
 		threadB.join();
 		threadC.join();

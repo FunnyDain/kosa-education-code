@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	#header{
+		width: 100%;
+		border-bottom: 2px solid #ccc;
+	}
+	#top{
+		width: 30%;
+		height: 150px;
+		margin: 30px auto;
+		background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, purple);		
+		border-radius: 10px;
+	}
+	
+	#top h2{
+		text-align: center;
+		color: #fff; 
+		line-height: 150px;
+	}
+	
+	#top span{
+		color: blue;
+	}
+	
+	#sec1{
+		width: 100%;
+	}
+	
+	.bottom{
+		width: 70%; 
+		margin: 40px auto 0px auto;
+	}
+	
+	ul{
+		list-style: none;
+		padding: 0;
+		margin: auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+	}
+	.weather{
+		width : 28%;
+		border: 3px solid #f06575;
+		padding : 5px;
+		box-shadow: 10px 10px 2px #F0B7BD;
+	}
+	
+	.weather > img{
+		width: 100%;
+	}
+	.weather>img:hover{
+		opacity: 0.3;
+		transition: .3s;
+		cursor:pointer;
+	}
+	
+	
+	
+</style>
+</head>
+<body>
+<header id="header">
+	<div id="top">
+		<h2><span>날씨</span>의 종류</h2>
+	</div>
+</header>
+
+<section id = "sec1">
+	<div class="bottom">
+		<ul>
+			<li class="weather">
+				<img src="../images/sun.png"/>
+			</li>
+			<li class="weather">
+				<img src="../images/rain.png"/>
+			</li>
+			<li class="weather">
+				<img src="../images/cloud.png"/>
+			</li>
+
+		</ul>
+	</div>
+	<div class="bottom">
+		<ul>
+			<li class="weather">
+				<img src="../images/cloud_sun.png"/>
+			</li>
+			<li class="weather">
+				<img src="../images/snow.png"/>
+			</li>
+			<li class="weather">
+				<img src="../images/etc.png"/>
+			</li>
+		</ul>
+	</div>
+
+
+</section>
+</body>
+</html>
